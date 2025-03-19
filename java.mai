@@ -1,0 +1,15 @@
+public void processInput() {
+    if (Keyboard.isKeyDown(Keyboard.KEY_W)) {
+        player.moveForward();
+    }
+    if (Keyboard.isKeyDown(Keyboard.KEY_S)) {
+        player.moveBackward();
+    }
+    if (Keyboard.isKeyDown(Keyboard.KEY_A)) {
+        player.moveLeft();
+    }
+    if (Keyboard.isKeyDown(Keyboard.KEY_D)) {
+        player.moveRight();
+    }
+    // Handle jumping, mouse look, etc.
+}
