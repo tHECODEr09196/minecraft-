@@ -1,0 +1,17 @@
+import org.lwjgl.util.vector.Vector2f;
+
+public class PerlinNoise {
+    public static float noise(float x, float y) {
+        int X = (int) Math.floor(x) & 255;
+        int Y = (int) Math.floor(y) & 255;
+        x -= Math.floor(x);
+        y -= Math.floor(y);
+        float u = fade(x);
+        float v = fade(y);
+        int A = p[X] + Y;
+        int B = p[X + 1] + Y;
+        return lerp(v, lerp(u, grad(p[A], x, y), grad(p[B], x - 1, y)), lerp(u, grad(p[A + 1], x, y - 1), grad(p[B + 1], x - 1, y - 1)));
+    }
+
+    // Perlin noise helper functions (fade, lerp, grad)...
+}
